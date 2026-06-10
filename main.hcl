@@ -22,4 +22,13 @@ resource "lab" "main" {
       show_stop = true
     }
   }
+  content {
+    chapter "__default" {
+      title = "Default"
+      page "demo-page" {
+        title     = "demo page"
+        reference = resource.page.demo-page
+      }
+    }
+  }
 }
